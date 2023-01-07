@@ -1,9 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import { FloatActionButton } from "../components/organisme/float-action-button";
 export default function Home() {
   return (
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  )
+    <>
+      <div className="min-h-screen ">
+        <div className=" absolute right-0 bottom-0 mr-9 mb-7 ">
+          <FloatActionButton />
+        </div>
+      </div>
+    </>
+  );
 }
