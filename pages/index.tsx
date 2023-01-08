@@ -1,5 +1,5 @@
 import React from "react";
-import { FloatActionButton } from "../components/organisme/float-action-button";
+import { FloatActionButton } from "../components/templates/float-action-button";
 export default function Home() {
   return (
     <>
