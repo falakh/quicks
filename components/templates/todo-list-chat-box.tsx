@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Todo } from "../organisme/Todo";
+import { Todo } from "../organisme/todo";
 import { DropDown } from "../organisme/drop-down";
+import { TodoListDummy } from "../../dummy-data/todo-list-data";
 
 export const listItem = ["Personal Errands", "Urgent To-Do"];
 
@@ -16,13 +17,9 @@ export function TodoListTempelates() {
         />
         <button className="bg-[#2F80ED] px-4 py-3 rounded-lg text-white font-bold">New task</button>
       </div>
-
-      <Todo
-        content="Closing off this case since this application has been cancelled. No one really understand how this case could possibly be cancelled. The options and the documents within this document were totally a guaranteed for a success!"
-        date={"2021-06-12"}
-        daysLeft="4 Days Left"
-        title="Close off Case #012920- RODRIGUES, Amiguel"
-      />
+      {TodoListDummy.map((value, index) => (
+        <Todo key={index} {...value} />
+      ))}
     </div>
   );
 }
